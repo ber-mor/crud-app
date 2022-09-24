@@ -1,0 +1,20 @@
+.action-buttons{
+    display: flex;
+    flex-direction: row;
+}
+
+.comment{
+    background-color: #ffffff;
+    box-shadow: 1px;
+    margin: 5px 0px 5px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 5px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.comment-button{
+    font-size: 0.7rem;
+}
