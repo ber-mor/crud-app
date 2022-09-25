@@ -1,13 +1,14 @@
 .action-buttons{
     display: flex;
     flex-direction: row;
+    gap: 10px
 }
 
 .comment{
     background-color: #ffffff;
     box-shadow: 1px;
-    margin: 5px 0px 5px 0px;
-    padding: 10px;
+    margin: 15px 0px 15px 0px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -16,5 +17,35 @@
 }
 
 .comment-button{
-    font-size: 0.7rem;
+    font-size: 0.8rem;
+}
+
+.comment-button:hover{
+    cursor: pointer;
+}
+
+.text{
+    margin-bottom:15px;
+    margin-top: 6px;
+    text-align: left;
+}
+
+.username{
+    margin-top: 3px;
+    margin-bottom: 0px;
+}
+
+.edit-form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0px 20px 0px;
+}
+
+.dialog{
+    width: 300px;
+}
+
+.text-field{
+    margin: 100px 0px
 }

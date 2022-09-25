@@ -8,15 +8,14 @@ export default function CommentsSection() {
   const [comments, setComments] = useState(null);
 
   const deleteCommentById = (id) => {
+    //the function returns if the user regrets deleting and nothing is deleted
     if (!window.confirm("Do you want to delete this comment?")) return;
-    console.log(id)
     setComments(comments => comments.filter(c => c.id !== id));
     deleteComment(id);
   };
 
   useEffect(() => {
     getComments(setComments);
-    console.log("RENDER")
   }, []);
 
   return comments === null ? (

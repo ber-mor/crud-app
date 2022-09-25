@@ -1,12 +1,17 @@
 .form-box{
     display: flex;
     flex-direction: column;
-    align-items: grow;
-    gap: 20px;
-    margin-bottom: 15px;
+    align-items: left;
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .submit-button{
   width: 100px;
-  align-self: end;
+  align-self: flex-end;
+}
+
+.card-title{
+  align-self: flex-start;
+  margin-bottom: 5px;
 }

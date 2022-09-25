@@ -1,38 +1,36 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import "./form.css";
 import { addComment } from "../../data/comments-api";
+import { fieldsAreFilled } from "../../utils/validations";
 
 export default function Form() {
   const [username, setUsername] = useState("");
   const [comment, setComment] = useState("");
 
+  /**
+   * Submits the form to add a new user and clears the form fields
+   * @param  {Event} e The event that triggers the function
+   */
   const onSubmit = (e) => {
     e.preventDefault()
-    if (!fieldsAreValid) return
+    if (!fieldsAreFilled([username, comment])) return
     addComment({username, comment})
-    setUsername("");
-    setComment("");
+    clearFields()
   };
 
-  //Validates for empty fields
-  const fieldsAreValid = () =>{
-    if (!(username.trim() && comment.trim())) {
-      alert("All fields are required");
-      setUsername("");
-      setComment("");
-      return false
-    }
-    return true
+  const clearFields = () =>{
+    setUsername("");
+    setComment("");
   }
 
   return (
     <form onSubmit={onSubmit}>
     <Box className="form-box">
-      <h1>Leave a Comment</h1>
+      <h1 className="card-title">Leave a Comment</h1>
         <TextField
           label="Email"
           // type="email"
@@ -43,6 +41,7 @@ export default function Form() {
         <TextField
           label="Add a comment..."
           multiline
+          minRows={3}
           required
           value={comment}
           onChange={(event) => setComment(event.target.value)}
