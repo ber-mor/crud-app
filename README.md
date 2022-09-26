@@ -1,5 +1,5 @@
 <h1>Simple CRUD React + NodeJS + MySQL Application</h1>
-<p>As the name suggests, this is a simple CRUD application. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components React, we'll get into that later.<p>
+<p>As the name suggests, this is a simple CRUD application to manage comments in a card. You can add, edit, update and delete comments. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components React, we'll get into that later.<p>
 
 <h2>Installation</h2>
 <h3>Database</h3>
@@ -16,12 +16,25 @@
     DB_REMOTE_NAME=yourdatabasename
     DB_REMOTE_USER=yourdatabaseuser
 
-
+ <p>For the development run, the script "start" uses nodemon as a dependency. If it does not work, you may want to install nodemon globally by running <code>npm install -g nodemon</code></p>
 <p>After that, you should be able to run the app by running <code>npm start</code> in your console.</p>
 
 <h3>React</h3>
-<p>The last part of the installation proccess consists getting into the client folder and running <code>npm install</code> to install the dependencies. Note that the package.json file for the React application is different from the one in the server</p>
+<p>The last part of the installation proccess consists on getting into the client folder and running <code>npm install</code> to install the dependencies. Note that the package.json file for the React application is different from the one in the server. And that's it, after the installation, you should be able to run the app by running <code>npm start</code> in your console.</p>
+    
+<p>And that is all for the setup. You can now start using the app!</p>
 
 <h2>Usage</h2>
+<p>Being a CRUD application with no extra functionality appart from the basic CRUD operations, the usage is trivial. However, I'm going to explain what happens in the background.</p>
 
+<h3>Inserting</h3>
+<p>The first thing you see is a form that you can use to add a new comment. Fields are validated, so you can't write something tha's not a email in the email field, and you can't leave an empty field. When you add a comment, an API request is made to post the new data, and it triggers a function that re-renders the comment section so you can see the new comment immediately at the top of the comments list.</p> 
+
+<h3>Editing</h3>
+<p>When there is one or more comments in the list, you're free to edit them individually by pressing the edit button. When you press it, it shows a modal that overlays the entire screen. This modal has the same form that the one for adding comments, with the difference that this one is already filled with the data of the comment that you want to edit. It is also validated so you need to write a valid email and not leave empty fields.</p>
+    
+<p>After pressing the save button on the modal, the comment component receives the new values from the form and re-renders only that component, while the API makes the update in the database in the background, this way React won't have to wait until the database responds, and the list won't have to re-render again.</p>
+    
+<h3>Deleting</h3>
+When there is one or more comments in the list, you're free to delete them individually by pressing the delete button. When you do so, a confirmation alert will show up, if accepted, a request is send to the api to delete the comment from the database. If nothing goes wrong, the list of comments is re-renderd without the deleted comment. 
  
