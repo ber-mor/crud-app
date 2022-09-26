@@ -10,11 +10,11 @@
 <p>You'll first have to install the dependecies. You can do that by going to the server folder and running <code>npm install</code> in the console, and all the dependencies will be installed according to the package.json file.</p>
 <p>Now, let's configure the database connection. Add a file to the root of the project and name it .env, it will hold all the sentitive information related to the database credentials. Here you will have to add some environment variables so you can use them to connect to the database. The file should look something like this:</p>
 <code>
-DB_REMOTE_HOST="yourdatabaseaddress"  
-DB_REMOTE_PORT="yourdatabaseport"  
-DB_REMOTE_PASSWORD="yourdatabasepassword"  
-DB_REMOTE_NAME="yourdatabasename"  
-DB_REMOTE_USER="yourdatabaseuser"
+DB_REMOTE_HOST="yourdatabaseaddress" <br />
+DB_REMOTE_PORT="yourdatabaseport"  <br />
+DB_REMOTE_PASSWORD="yourdatabasepassword"<br />  
+DB_REMOTE_NAME="yourdatabasename"  <br />
+DB_REMOTE_USER="yourdatabaseuser"<br />
 </code>
 <p>After that, you should be able to run the app by running <code>npm start</code> in your console.</p>
 
