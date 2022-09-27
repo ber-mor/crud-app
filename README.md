@@ -50,10 +50,10 @@
 <h3>React Application</h3>
 <p>The structure of the source code is quite simple:</p>
 <ul>
-    <li>The App.js file contains the main React component, the parent of everything.</li>
-    <li>The components folder contains the components themselves and a css file related to that component.</li>
-    <li>The data folder contains the neccessary files to manage the api calls.</li>
-    <li>The utils folder contains a file with useful functions used in some components.</li>
+    <li>The <code>App.js</code> file contains the main React component, the parent of everything.</li>
+    <li>The <code>components</code> folder contains the components themselves and a css file related to that component.</li>
+    <li>The <code>data</code> folder contains the neccessary files to manage the api calls.</li>
+    <li>The <code>utils</code> folder contains a file with useful functions used in some components.</li>
 </ul>
     
 <p>As said before, the React Applications makes use of the <a href="https://mui.com/">MUI<a> library. This is a library that provide pre-styled anc customizable components. This makes possible to develop a good looking UI in less time.</p>
