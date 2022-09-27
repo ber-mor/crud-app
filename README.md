@@ -1,5 +1,5 @@
 <h1>Simple CRUD React + NodeJS + MySQL Application</h1>
-<p>As the name suggests, this is a simple CRUD application to manage comments in a card. You can add, edit, update and delete comments. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components React, we'll get into that later.<p>
+<p>As the name suggests, this is a simple CRUD application to manage comments in a card. You can add, edit, update and delete comments. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components in React, we'll get into that later.<p>
 
 <h2>Installation</h2>
 <h3>Database</h3>
