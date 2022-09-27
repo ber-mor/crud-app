@@ -1,34 +1,37 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./comments.css";
-import { getComments, deleteComment } from "../../data/comments-api";
-import CircularProgress from "@mui/material/CircularProgress";
+import { deleteComment } from "../../data/comments-api";
 import Comment from "./Comment";
+import PropTypes from "prop-types";
 
-export default function CommentsSection() {
-  const [comments, setComments] = useState(null);
+export default function CommentsSection({data}) {
+  const [comments, setComments] = useState(data);
 
-  const deleteCommentById = (id) => {
+  const onDeleteComment = (id) => {
     //the function returns if the user regrets deleting and nothing is deleted
     if (!window.confirm("Do you want to delete this comment?")) return;
-    setComments(comments => comments.filter(c => c.id !== id));
     deleteComment(id);
+    setComments(comments => comments.filter(c => c.id !== id));
   };
 
-  useEffect(() => {
-    getComments(setComments);
-  }, []);
-
-  return comments === null ? (
-    <CircularProgress />
-  ) : (
+  return (
     <>
       {comments.map((comment) => (
         <Comment
           key={comment.id}
           data={comment}
-          deleteCommentById={deleteCommentById}
+          onDeleteComment={onDeleteComment}
         />
       ))}
     </>
   );
 }
+
+CommentsSection.propTypes = {
+  data: PropTypes.object
+}
+
+CommentsSection.defaultProps = {
+  data: {},
+};
+

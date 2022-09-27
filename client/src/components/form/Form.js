@@ -1,13 +1,13 @@
 import React from "react";
 import TextField from "@mui/material/TextField";
-import { useState, useEffect } from "react";
+import { useState} from "react";
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
 import "./form.css";
-import { addComment } from "../../data/comments-api";
 import { fieldsAreFilled } from "../../utils/validations";
+import PropTypes from "prop-types";
 
-export default function Form() {
+export default function Form({onAddComment}) {
   const [username, setUsername] = useState("");
   const [comment, setComment] = useState("");
 
@@ -17,23 +17,26 @@ export default function Form() {
    */
   const onSubmit = (e) => {
     e.preventDefault()
+    //trims the values before sending them to the api
+    trimFields()
     if (!fieldsAreFilled([username, comment])) return
-    addComment({username, comment})
-    clearFields()
+    onAddComment({username, comment})
+    setUsername("")
+    setComment("")
   };
 
-  const clearFields = () =>{
-    setUsername("");
-    setComment("");
+  const trimFields = () =>{
+    setUsername(username => username.trim())
+    setComment(comment => comment.trim())
   }
 
   return (
     <form onSubmit={onSubmit}>
     <Box className="form-box">
-      <h1 className="card-title">Leave a Comment</h1>
+      <h1 className="card-title">Leave comments</h1>
         <TextField
           label="Email"
-          // type="email"
+          type="email"
           required
           value={username}
           onChange={(event) => setUsername(event.target.value)}
@@ -57,3 +60,12 @@ export default function Form() {
     </form>
   );
 }
+
+Form.propTypes = {
+  onAddComment: PropTypes.func
+}
+
+Form.defaultProps = {
+  onAddComment: () => {},
+};
+
