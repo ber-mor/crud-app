@@ -32,7 +32,7 @@
 
 <h3>Inserting</h3>
 <p>The first thing you see is a form that you can use to add a new comment. Fields are validated, so you can't write something tha's not a email in the email field, and you can't leave an empty field. When you add a comment, an API request is made to post the new data, and it triggers a function that re-renders the comment section so you can see the new comment immediately at the top of the comments list.</p> 
-    ![imagen](https://user-images.githubusercontent.com/53983892/192405228-c4b0953b-9ac1-4027-b89b-aa11b71b5ff3.png)
+![imagen](https://user-images.githubusercontent.com/53983892/192405228-c4b0953b-9ac1-4027-b89b-aa11b71b5ff3.png)
 
 
 <h3>Editing</h3>
@@ -63,8 +63,3 @@
 </ul>
     
 <p>As said before, the React Applications makes use of the <a href="https://mui.com/">MUI<a> library. This is a library that provide pre-styled anc customizable components. This makes possible to develop a good looking UI in less time.</p>
-
-
-    
-
- 
