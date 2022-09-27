@@ -50,7 +50,7 @@
 <p>When there is one or more comments in the list, you're free to delete them individually by pressing the delete button. When you do so, a confirmation alert will show up, if accepted, a request is send to the api to delete the comment from the database. If nothing goes wrong, the list of comments is re-renderd without the deleted comment.</p>
     
 <h3>Create a production build</h3>
-<p>For the react project, running <code>npm run build</code> should do the job. I will create a build folder ready to be deployed.</p>
+<p>For the react project, be sure that the url in the api file is the address to the server, after that, running <code>npm run build</code> should do the job. I will create a build folder ready to be deployed.</p>
 <p>The API should work as is. You can configure a PM2 instance in a linux server and run it with <code>pm2 start index.js</code></p>
 
 <h2>Design</h2>
