@@ -1,5 +1,8 @@
 <h1>Simple CRUD React + NodeJS + MySQL Application</h1>
-<p>As the name suggests, this is a simple CRUD application to manage comments in a card. You can add, edit, update and delete comments. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components in React, we'll get into that later.<p>
+<p>As the name suggests, this is a simple CRUD application to manage comments in a card. You can add, edit, update and delete comments. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. The React application is responsive, so you can use on mobile as well. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components in React, we'll get into that later.<p> 
+<p>This is how it looks like:</p>
+    
+ ![demo](https://user-images.githubusercontent.com/53983892/192406300-266d1892-18c1-40da-926f-3ed0543219cf.png)
 
 <h2>Installation</h2>
 <h3>Database</h3>
@@ -38,6 +41,8 @@
 
 <h3>Editing</h3>
 <p>When there is one or more comments in the list, you're free to edit them individually by pressing the edit button. When you press it, it shows a modal that overlays the entire screen. This modal has the same form that the one for adding comments, with the difference that this one is already filled with the data of the comment that you want to edit. It is also validated so you need to write a valid email and not leave empty fields.</p>
+    
+![edit](https://user-images.githubusercontent.com/53983892/192405980-e37f97bd-e870-43b6-a54f-8b2be48bc74b.png)
     
 <p>After pressing the save button on the modal, the comment component receives the new values from the form and re-renders only that component, while the API makes the update in the database in the background, this way React won't have to wait until the database responds, and the list won't have to re-render again.</p>
     
