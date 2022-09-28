@@ -1,8 +1,10 @@
 <h1>Comments: Simple CRUD Application</h1>
 <p>As the name suggests, this is a simple CRUD application to manage comments in a card. The application is built in the stack MySQL, NodeJS and React. You can add, edit, update and delete comments. It covers the basics on how to consume a NodeJS REST API from a React application. It also covers the connection of the API with a MySQL database. The React application is responsive, so you can use on mobile as well. Some external libraries were used to make things easier and to make development faster, like <a href="https://expressjs.com/">ExpressJS<a> for the backend server in NodeJS, and <a href="https://mui.com/">MUI<a> to style components in React, we'll get into that later.<p> 
 <p>This is how it looks like:</p>
-    
+   
  ![demo](https://user-images.githubusercontent.com/53983892/192406300-266d1892-18c1-40da-926f-3ed0543219cf.png)
+ 
+<p>Or you can watch the <a href="https://crud.bernardomorcon.com/">live demo</a></p>
 
 <h2>Installation</h2>
 <h3>Database</h3>
