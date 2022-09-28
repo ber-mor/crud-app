@@ -1,12 +1,12 @@
 import Axios from "axios";
-const URL = "https://www.api.bernardomorcon.com/"
+const URL = "http://localhost:3001/"
 
 /**
  * Retrieves the comments from the api
  * @return {Promise} The promise from the api call
  */
 export const getComments = () =>{
-    return Axios.get(URL)
+    return Axios.get(`${URL}`)
 }
 
 /**
@@ -15,7 +15,7 @@ export const getComments = () =>{
  * @return {Promise}    The promise from the api call
  */
 export const addComment = (data) =>{
-    return Axios.post(URL, data)
+    return Axios.post(`${URL}/new`, data)
 }
 
 /**
@@ -25,7 +25,7 @@ export const addComment = (data) =>{
  */
 export const updateComment = async (data) =>{
     try{
-        await Axios.put(URL, data)
+        await Axios.put(`${URL}/update/${data.id}`, data)
         alert("Comment updated")
     }catch(error){
         console.error(error)
@@ -39,7 +39,7 @@ export const updateComment = async (data) =>{
  */
 export const deleteComment = async (id) =>{
     try{
-        await Axios.delete(URL)
+        await Axios.delete(`${URL}/delete/${id}`)
     }catch(error){
         console.error(error)
     }
