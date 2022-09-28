@@ -1,5 +1,5 @@
 import Axios from "axios";
-const URL = "http://localhost:3001/"
+const URL = "https://www.api.bernardomorcon.com"
 
 /**
  * Retrieves the comments from the api
